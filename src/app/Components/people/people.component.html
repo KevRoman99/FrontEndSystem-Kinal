@@ -1,0 +1,203 @@
+<br>
+<h1 class="display-4">Ingrese sus datos</h1>
+<div style="width:80%; margin-left:10%">
+   <!-- <div style="width:40%; margin-left:27%">-->
+<hr class="hola">
+</div>
+<div class="shadow p-3 mb-5 bg-white rounded" style="width:1390px; margin-left: 4%">
+
+<div class="conteiner">
+    <div class="row">
+        <div class="col md-4">
+            <form>
+                <input required='' type='text' [(ngModel)]="person.firstName" [ngModelOptions]="{standalone: true}" >
+                <label alt='Primer nombre' placeholder='Primer nombre'></label>
+            </form>
+        </div>
+        <div class="col md-4">
+            <form>
+                <input required='' type='text' [(ngModel)]="person.middleName" [ngModelOptions]="{standalone: true}">
+                <label alt='Segundo nombre' placeholder='Segundo nombre'></label>
+            </form>
+        </div>
+    </div>
+</div>
+<br>
+
+<div class="conteiner">
+    <div class="row">
+        <div class="col md-4">
+            <form>
+                <input required='' type='text' [(ngModel)]="person.firstLastName"[ngModelOptions]="{standalone: true}">
+                <label alt='Primer Apellido' placeholder='Primer Apellido'></label>
+            </form>
+        </div>
+        <div class="col md-4">
+            <form>
+                <input required='' type='text' [(ngModel)]="person.secondLastName"[ngModelOptions]="{standalone: true}">
+                <label alt='Segundo apellido' placeholder='Segundo apellido'></label>
+            </form>      
+        </div>
+        <div class="col md-4">
+            <form>
+                <input required='' type='text' [(ngModel)]="person.marriedName"[ngModelOptions]="{standalone: true}">
+                <label alt='Apellido de casada' placeholder='Apellido de casada'></label>
+            </form>           
+        </div>
+    </div>
+</div>
+<hr>
+
+<div class="conteiner">
+    <div class="row">
+        <div class="col md-3">
+            <form>
+                <input required="" type='date' [(ngModel)]="person.birthname"[ngModelOptions]="{standalone: true}">
+                <label alt='Fecha de nacimiento' placeholder='Fecha de nacimiento'></label>
+            </form>   
+        </div>
+        <div class="col md-3">
+            <form>
+                <select required="" class="custom-select" [(ngModel)]="person.civilStatus"[ngModelOptions]="{standalone: true}">
+                    <option value="" hidden></option>
+                    <option selected>Estado civil...</option>
+                    <option value="CASADO">Casado</option>
+                    <option value="SOLTERO">Soltero</option>
+                    <option value="CASADA">Casada</option>
+                    <option value="SOLTERA">Soltera</option>
+                </select> 
+                <label alt='Estado Civil' placeholder='Estado CIvil'></label>
+            </form>     
+        </div>
+        <div class="col md-3">
+            <form>
+                <select required="" class="custom-select" [(ngModel)]="person.religion"[ngModelOptions]="{standalone: true}">
+                    <option value="" hidden></option>
+                    <option selected>Elije tu religion...</option>
+                    <option value="CATOLICO">Catolico</option>
+                    <option value="EVANGELICO">Mormon</option>
+                    <option value="ATEO">Ateo</option>
+                    <option value="MORMON">Mormon</option>
+                    <option value="BUDISTA">Budista</option>
+                    <option value="TESTIGO DE JEHOVA">Testigo de Jehova</option>
+                </select> 
+                <label alt='Religion' placeholder='Religion'></label>
+            </form>     
+        </div>
+    </div>
+</div>
+<br>
+
+<div class="conteiner">
+    <div class="row">
+        <div class="col md-2">
+            <form>
+                <input [(ngModel)]="person.email" name="emaii" required=""  type='text' id="input" style="width: 89%"[ngModelOptions]="{standalone: true}">
+                <label alt='Correo electronico' placeholder='Correo electronico' style="width: 20%; position: absolute;"></label> 
+                <button type="button" class="btn btn-outline-info" style="margin-left:5%;margin-bottom: 1%" (click)="addEmail()">+</button>
+            </form>  
+        </div>
+        <div class="col md-3">
+            <form>
+                    <select required="" class="custom-select" [(ngModel)]="person.gender"[ngModelOptions]="{standalone: true}"> 
+                        <option value="" hidden></option>
+                        <option selected>Elije tu genero...</option>
+                        <option value="MASCULINO">MASCULINO</option>
+                        <option value="FEMENINO">FEMENINO</option>
+                    </select> 
+                <label alt='Genero' placeholder='Genero'></label>
+            </form>      
+        </div>
+    </div>
+</div>
+<hr>
+
+<div class="conteiner">
+    <div class="row">
+        <br>
+        <div class="col md-2">
+            <select required="" class="custom-select" [(ngModel)]="person.department"[ngModelOptions]="{standalone: true}">
+                <option value="" hidden></option>
+                <option selected>Elije tu departamento...</option>
+                <option value="ALTA VERAPAZ">Alta Verapaz</option>
+                <option value="BAJA VERAPAZ">Baja Verapaz</option>
+                <option value="CHIMALTENANGO">Chimaltenango</option>
+                <option value="PETEN">Petén</option>
+                <option value="EL PROGRESO">El Progreso</option>
+                <option value="QUICHE">Quiché</option>
+                <option value="ESCUINTLA">Escuintla</option>
+                <option value="GUATEMALA">Guatemala</option>
+                <option value="IZABAL">Izabal</option>
+                <option value="JALAPA">Jalapa</option>
+                <option value="JUTIAPA">Jutiapa</option>
+                <option value="QUETZALTENANGO">Quetzaltenango</option>
+                <option value="RETALHULEU">Retalhuleu</option>
+                <option value="SACATEPEQUEZ">Sacatepéquez</option>
+                <option value="SAN MARCOS">San Marcos</option>
+                <option value="SANTA ROSA">Santa Rosa</option>
+                <option value="SOLOLA">Sololá</option>
+                <option value="SUCHITEPEQUEZ">Suchitepéquez</option>
+                <option value="TOTONICAPAN">Totonicapán</option>
+                <option value="ZACAPA">Zacapa</option>
+            </select> 
+            <label alt='Departamento' placeholder='Departamento'></label> 
+        </div>
+        <div class="col md-2">
+            <input required='' type='text' [(ngModel)]="person.municipality"[ngModelOptions]="{standalone: true}">
+            <label alt='Municipio' placeholder='Municipio'></label>   
+        </div>
+        <div class="col md-2">
+            <input required='' type='text' [(ngModel)]="person.zone"[ngModelOptions]="{standalone: true}">
+            <label alt='Zona' placeholder='Zona'></label>  
+        </div>
+        <div class="col md-2">
+            <input required='' type='text' [(ngModel)]="person.residential"[ngModelOptions]="{standalone: true}">
+            <label alt='Colonia o residencial' placeholder='Colonia o residencial'></label>    
+        </div>
+    </div>
+</div>
+<br>
+
+<div class="conteiner">
+    <div class="row">
+        <div class="col md-3">
+            <input required='' type='text' [(ngModel)]="person.avenue"[ngModelOptions]="{standalone: true}">
+            <label alt='Avenida' placeholder='Avenida'></label> 
+        </div>
+        <div class="col md-3">
+            <input required='' type='text' [(ngModel)]="person.street"[ngModelOptions]="{standalone: true}">
+            <label alt='Calle' placeholder='Calle'></label>      
+        </div>
+        <div class="col md-3">
+            <input required='' type='text' [(ngModel)]="person.sector"[ngModelOptions]="{standalone: true}">
+            <label alt='Manzana' placeholder='Manzana'></label>      
+        </div>
+        <div class="col md-3">
+            <input required='' type='text' [(ngModel)]="person.number"[ngModelOptions]="{standalone: true}">
+            <label alt='Número de casa' placeholder='Número de casa'></label>     
+        </div>
+    </div>
+</div>
+<hr>
+
+<div class="conteiner">
+    <div class="row">
+        <div class="col md-4">
+            <input required='' type='text' maxlength="8"  [(ngModel)]="person.house"[ngModelOptions]="{standalone: true}">
+            <label alt='Telefono de residencia' placeholder='Telefono de residencia'></label>
+        </div>
+        <div class="col md-4">
+            <input required='' type='text' maxlength="8"  [(ngModel)]="person.cellphone"[ngModelOptions]="{standalone: true}">
+            <label alt='Celular' placeholder='Celular'></label>     
+        </div>
+        <div class="col md-4">
+            <input [(ngModel)]="person.otherNumber" name="other" maxlength="8"  required=""  type='text' id="input" style="width: 85%"[ngModelOptions]="{standalone: true}">
+            <label alt='Otro' placeholder='Otro' style="width: 20%; position: absolute;"></label> 
+            <button type="button" class="btn btn-outline-info" style="margin-left:5%; margin-bottom: 1%"  (click)="addPhone()">+</button>
+        </div>
+    </div>
+</div>
+<br>
+<button type="button" (click)="onSumit()" class="btn btn-outline-primary">Enviar formulario</button>
+
+</div>
