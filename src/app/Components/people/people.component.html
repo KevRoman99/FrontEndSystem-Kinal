@@ -38,6 +38,30 @@
                 <label alt='Segundo apellido' placeholder='Segundo apellido'></label>
             </form>      
         </div>
+        <div class="col md-3">
+            <form>
+                <select required="" class="custom-select" [(ngModel)]="person.civilStatus"[ngModelOptions]="{standalone: true}">
+                    <option value="" hidden></option>
+                    <option selected>Estado civil...</option>
+                    <option value="CASADO">Casado</option>
+                    <option value="SOLTERO">Soltero</option>
+                    <option value="CASADA">Casada</option>
+                    <option value="SOLTERA">Soltera</option>
+                </select> 
+                <label alt='Estado Civil' placeholder='Estado CIvil'></label>
+            </form>     
+        </div>
+        <div class="col md-3">
+            <form>
+                    <select required="" class="custom-select" [(ngModel)]="person.gender"[ngModelOptions]="{standalone: true}"> 
+                        <option value="" hidden></option>
+                        <option selected>Elije tu genero...</option>
+                        <option value="MASCULINO">MASCULINO</option>
+                        <option value="FEMENINO">FEMENINO</option>
+                    </select> 
+                <label alt='Genero' placeholder='Genero'></label>
+            </form>      
+        </div>
         <div class="col md-4">
             <form>
                 <input required='' type='text' [(ngModel)]="person.marriedName"[ngModelOptions]="{standalone: true}">
@@ -55,19 +79,6 @@
                 <input required="" type='date' [(ngModel)]="person.birthname"[ngModelOptions]="{standalone: true}">
                 <label alt='Fecha de nacimiento' placeholder='Fecha de nacimiento'></label>
             </form>   
-        </div>
-        <div class="col md-3">
-            <form>
-                <select required="" class="custom-select" [(ngModel)]="person.civilStatus"[ngModelOptions]="{standalone: true}">
-                    <option value="" hidden></option>
-                    <option selected>Estado civil...</option>
-                    <option value="CASADO">Casado</option>
-                    <option value="SOLTERO">Soltero</option>
-                    <option value="CASADA">Casada</option>
-                    <option value="SOLTERA">Soltera</option>
-                </select> 
-                <label alt='Estado Civil' placeholder='Estado CIvil'></label>
-            </form>     
         </div>
         <div class="col md-3">
             <form>
@@ -96,17 +107,6 @@
                 <label alt='Correo electronico' placeholder='Correo electronico' style="width: 20%; position: absolute;"></label> 
                 <button type="button" class="btn btn-outline-info" style="margin-left:5%;margin-bottom: 1%" (click)="addEmail()">+</button>
             </form>  
-        </div>
-        <div class="col md-3">
-            <form>
-                    <select required="" class="custom-select" [(ngModel)]="person.gender"[ngModelOptions]="{standalone: true}"> 
-                        <option value="" hidden></option>
-                        <option selected>Elije tu genero...</option>
-                        <option value="MASCULINO">MASCULINO</option>
-                        <option value="FEMENINO">FEMENINO</option>
-                    </select> 
-                <label alt='Genero' placeholder='Genero'></label>
-            </form>      
         </div>
     </div>
 </div>
@@ -175,6 +175,12 @@
         <div class="col md-3">
             <input required='' type='text' [(ngModel)]="person.number"[ngModelOptions]="{standalone: true}">
             <label alt='Número de casa' placeholder='Número de casa'></label>     
+        </div>
+        <div class="col md-2">
+            <form>
+                <input required='' type='text' [(ngModel)]="person.other" [ngModelOptions]="{standalone: true}" >
+                <label alt='Otros requerimientos' placeholder='otros requerimientos'></label>
+            </form>
         </div>
     </div>
 </div>
